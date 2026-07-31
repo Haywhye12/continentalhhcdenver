@@ -6,7 +6,7 @@
   <title>Client Resources & FAQs | Continental Home Health, Inc.</title>
   <meta name="description" content="Insurance coverage, Medicaid, Medicare, payment options, and frequently asked questions for home health care in Denver & Aurora, CO.">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.png">
+  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.webp">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -32,7 +32,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
+          <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
         </a>
 
         <ul class="nav-menu">
@@ -52,17 +52,85 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header page-header-resources">
-    <div class="container">
-      <div class="page-header-content">
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> <span>Resources</span>
+  <!-- Page Hero — Resources -->
+  <section class="ph ph--resources" id="ph-resources" aria-label="Resources hero">
+    <div class="ph__bg" aria-hidden="true"></div>
+    <canvas class="ph__canvas" aria-hidden="true"></canvas>
+    <div class="ph__orb ph__orb--1" aria-hidden="true"></div>
+    <div class="ph__orb ph__orb--2" aria-hidden="true"></div>
+    <div class="ph__lines" aria-hidden="true"></div>
+
+    <div class="container ph__container">
+      <div class="ph__content">
+
+        <nav class="ph__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Resources</span>
+        </nav>
+
+        <div class="ph__tag" style="background:rgba(59,130,246,0.14);border-color:rgba(59,130,246,0.32);color:#93C5FD;">
+          <i class="fa-solid fa-book-medical"></i> Guidance &amp; Information
         </div>
-        <h1 class="page-title">Client & Family Care Resources</h1>
-        <p class="page-description">Navigating home healthcare options, insurance coverage, and answers to common questions about in-home care in Colorado.</p>
+
+        <h1 class="ph__title">
+          Client &amp; Family <span class="accent">Care Resources</span>
+        </h1>
+
+        <p class="ph__desc">
+          Navigating home healthcare options, insurance coverage, and answers to common questions about in-home care in Colorado — all in one place.
+        </p>
+
+        <div class="ph__actions">
+          <a href="#coverage" class="btn btn-primary">
+            <i class="fa-solid fa-file-medical"></i> Insurance &amp; Coverage
+          </a>
+          <a href="#faq" class="btn btn-outline-white">
+            <i class="fa-solid fa-circle-question"></i> View FAQs
+          </a>
+        </div>
+
+        <div class="ph__divider">
+          <div class="ph__divider-line"></div>
+          <div class="ph__chips">
+            <span class="ph__chip"><i class="fa-solid fa-file-medical"></i> Medicaid</span>
+            <span class="ph__chip"><i class="fa-solid fa-hospital-user"></i> Medicare</span>
+            <span class="ph__chip"><i class="fa-solid fa-shield-heart"></i> LTC Insurance</span>
+            <span class="ph__chip"><i class="fa-solid fa-circle-question"></i> FAQs</span>
+          </div>
+        </div>
+
+      </div><!-- /.ph__content -->
+
+      <div class="ph__cards" aria-label="Resource highlights">
+        <div class="ph__card">
+          <div class="ph__card-icon" style="background:#3B82F6;"><i class="fa-solid fa-file-medical"></i></div>
+          <div class="ph__card-body">
+            <strong>Medicaid Accepted</strong>
+            <span>Health First Colorado</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-teal"><i class="fa-solid fa-hospital-user"></i></div>
+          <div class="ph__card-body">
+            <strong>Medicare Covered</strong>
+            <span>Skilled nursing &amp; therapy</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-navy"><i class="fa-solid fa-circle-question"></i></div>
+          <div class="ph__card-body">
+            <strong>20+ FAQs</strong>
+            <span>Common care questions</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /.ph__container -->
+
+    <a href="#coverage" class="ph__scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- Insurance & Payment Options -->
@@ -251,7 +319,7 @@
       <div class="footer-grid">
         <div class="footer-col footer-about">
           <a href="index.html" class="logo" style="background: white; padding: 8px 16px; border-radius: 10px; display: inline-block;">
-            <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
+            <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
           </a>
           <p>Delivering compassionate, licensed in-home nursing, personal care, and therapy services to enhance independence and quality of life across Colorado.</p>
           <div class="social-links">

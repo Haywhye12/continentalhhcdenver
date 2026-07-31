@@ -6,7 +6,7 @@
   <title>In-Home Health Services | Continental Home Health, Inc. Denver CO</title>
   <meta name="description" content="Explore our home health services in Denver & Aurora: Nursing care, personal care, homemaking, community connector, therapy, and respite care.">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.png">
+  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.webp">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,7 +33,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
+          <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
         </a>
 
         <ul class="nav-menu">
@@ -53,17 +53,86 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header page-header-services">
-    <div class="container">
-      <div class="page-header-content">
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> <span>Services</span>
+  <!-- Page Hero — Services -->
+  <section class="ph ph--services" id="ph-services" aria-label="Services hero">
+    <div class="ph__bg" aria-hidden="true"></div>
+    <canvas class="ph__canvas" aria-hidden="true"></canvas>
+    <div class="ph__orb ph__orb--1" aria-hidden="true"></div>
+    <div class="ph__orb ph__orb--2" aria-hidden="true"></div>
+    <div class="ph__lines" aria-hidden="true"></div>
+
+    <div class="container ph__container">
+      <div class="ph__content">
+
+        <nav class="ph__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Services</span>
+        </nav>
+
+        <div class="ph__tag">
+          <i class="fa-solid fa-notes-medical"></i> What We Provide
         </div>
-        <h1 class="page-title">Comprehensive In-Home Care Services</h1>
-        <p class="page-description">Tailored medical and personal support designed to promote recovery, safety, and independence at home.</p>
+
+        <h1 class="ph__title">
+          Comprehensive <span class="accent">In-Home Care</span><br>Services
+        </h1>
+
+        <p class="ph__desc">
+          Tailored medical and personal support designed to promote recovery, safety, and independence — delivered by licensed Colorado caregivers in your own home.
+        </p>
+
+        <div class="ph__actions">
+          <a href="#consultation" class="btn btn-primary" data-open-modal>
+            <i class="fa-solid fa-calendar-check"></i> Get a Free Assessment
+          </a>
+          <a href="#nursing" class="btn btn-outline-white">
+            <i class="fa-solid fa-list"></i> View All Services
+          </a>
+        </div>
+
+        <div class="ph__divider">
+          <div class="ph__divider-line"></div>
+          <div class="ph__chips">
+            <span class="ph__chip"><i class="fa-solid fa-user-nurse"></i> Nursing Care</span>
+            <span class="ph__chip"><i class="fa-solid fa-hands-holding-child"></i> Personal Care</span>
+            <span class="ph__chip"><i class="fa-solid fa-broom"></i> Homemaking</span>
+            <span class="ph__chip"><i class="fa-solid fa-crutch"></i> Therapy</span>
+            <span class="ph__chip"><i class="fa-solid fa-bed-pulse"></i> Respite Care</span>
+          </div>
+        </div>
+
+      </div><!-- /.ph__content -->
+
+      <div class="ph__cards" aria-label="Service highlights">
+        <div class="ph__card">
+          <div class="ph__card-icon bg-teal"><i class="fa-solid fa-user-nurse"></i></div>
+          <div class="ph__card-body">
+            <strong>Skilled Nursing</strong>
+            <span>RNs &amp; LPNs on-call</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-navy"><i class="fa-solid fa-house-medical"></i></div>
+          <div class="ph__card-body">
+            <strong>In-Home Comfort</strong>
+            <span>Personalized care plans</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-gold"><i class="fa-solid fa-shield-heart"></i></div>
+          <div class="ph__card-body">
+            <strong>Insurance Accepted</strong>
+            <span>Medicaid &amp; Medicare</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /.ph__container -->
+
+    <a href="#nursing" class="ph__scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- Service 1: Skilled Nursing -->
@@ -91,7 +160,7 @@
 
         <div>
           <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);">
-            <img src="images/healthworker-assisting-a-patient.jpg" alt="Health worker assisting patient with medical care">
+            <img src="images/healthworker-assisting-a-patient.webp" alt="Health worker assisting patient with medical care">
           </div>
         </div>
       </div>
@@ -104,7 +173,7 @@
       <div class="why-grid">
         <div>
           <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);">
-            <img src="images/helping-an-elder.jpg" alt="Caregiver helping senior client with mobility">
+            <img src="images/helping-an-elder.webp" alt="Caregiver helping senior client with mobility">
           </div>
         </div>
 
@@ -154,7 +223,7 @@
 
         <div>
           <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);">
-            <img src="images/elders-with-care-aides.jpg" alt="Aides assisting with home care in Denver">
+            <img src="images/elders-with-care-aides.webp" alt="Aides assisting with home care in Denver">
           </div>
         </div>
       </div>
@@ -212,7 +281,7 @@
       <div class="footer-grid">
         <div class="footer-col footer-about">
           <a href="index.html" class="logo" style="background: white; padding: 8px 16px; border-radius: 10px; display: inline-block;">
-            <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
+            <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
           </a>
           <p>Delivering compassionate, licensed in-home nursing, personal care, and therapy services to enhance independence and quality of life across Colorado.</p>
           <div class="social-links">

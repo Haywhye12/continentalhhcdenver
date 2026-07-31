@@ -6,7 +6,7 @@
   <title>Contact Us | Continental Home Health, Inc. Aurora & Denver CO</title>
   <meta name="description" content="Get in touch with Continental Home Health, Inc. Call 720-603-4184 or visit our office at 1450 S Havana St, Suite 440, Aurora CO. Schedule a free consultation.">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.png">
+  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.webp">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,7 +33,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
+          <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
         </a>
 
         <ul class="nav-menu">
@@ -53,21 +53,88 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header page-header-contact">
-    <div class="container">
-      <div class="page-header-content">
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> <span>Contact</span>
+  <!-- Page Hero — Contact -->
+  <section class="ph ph--contact" id="ph-contact" aria-label="Contact hero">
+    <div class="ph__bg" aria-hidden="true"></div>
+    <canvas class="ph__canvas" aria-hidden="true"></canvas>
+    <div class="ph__orb ph__orb--1" aria-hidden="true"></div>
+    <div class="ph__orb ph__orb--2" aria-hidden="true"></div>
+    <div class="ph__lines" aria-hidden="true"></div>
+
+    <div class="container ph__container">
+      <div class="ph__content">
+
+        <nav class="ph__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Contact</span>
+        </nav>
+
+        <div class="ph__tag" style="background:rgba(139,92,246,0.14);border-color:rgba(139,92,246,0.32);color:#C4B5FD;">
+          <i class="fa-solid fa-headset"></i> We're Here to Help
         </div>
-        <h1 class="page-title">Get in Touch With Our Care Team</h1>
-        <p class="page-description">We are available to answer questions, discuss care plans, or schedule a free in-home assessment.</p>
+
+        <h1 class="ph__title">
+          Get in Touch with <span class="accent">Our Care Team</span>
+        </h1>
+
+        <p class="ph__desc">
+          We are available to answer questions, discuss care plans, or schedule a free in-home assessment. Reach out — we respond promptly.
+        </p>
+
+        <div class="ph__actions">
+          <a href="tel:7206034184" class="btn btn-primary">
+            <i class="fa-solid fa-phone"></i> 720-603-4184
+          </a>
+          <a href="#consultation" class="btn btn-outline-white" data-open-modal>
+            <i class="fa-solid fa-calendar-check"></i> Book a Consultation
+          </a>
+        </div>
+
+        <div class="ph__divider">
+          <div class="ph__divider-line"></div>
+          <div class="ph__chips">
+            <span class="ph__chip"><i class="fa-solid fa-clock"></i> Mon–Fri: 9AM–4PM</span>
+            <span class="ph__chip"><i class="fa-solid fa-headset"></i> 24/7 On-Call</span>
+            <span class="ph__chip"><i class="fa-solid fa-location-dot"></i> Aurora, CO 80012</span>
+          </div>
+        </div>
+
+      </div><!-- /.ph__content -->
+
+      <div class="ph__cards" aria-label="Contact quick info">
+        <div class="ph__card">
+          <div class="ph__card-icon" style="background:#8B5CF6;"><i class="fa-solid fa-phone"></i></div>
+          <div class="ph__card-body">
+            <strong>720-603-4184</strong>
+            <span>Primary line</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-teal"><i class="fa-solid fa-envelope"></i></div>
+          <div class="ph__card-body">
+            <strong>Email Us</strong>
+            <span>Quick response guaranteed</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-navy"><i class="fa-solid fa-clock"></i></div>
+          <div class="ph__card-body">
+            <strong>24/7 On-Call</strong>
+            <span>Always available</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /.ph__container -->
+
+    <a href="#contact-form" class="ph__scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- Contact Info & Form Grid -->
-  <section class="section-padding">
+  <section class="section-padding" id="contact-form">
     <div class="container">
       <div class="contact-grid">
         <!-- Contact Info Side -->
@@ -180,7 +247,7 @@
       <div class="footer-grid">
         <div class="footer-col footer-about">
           <a href="index.html" class="logo" style="background: white; padding: 8px 16px; border-radius: 10px; display: inline-block;">
-            <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
+            <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
           </a>
           <p>Delivering compassionate, licensed in-home nursing, personal care, and therapy services to enhance independence and quality of life across Colorado.</p>
           <div class="social-links">

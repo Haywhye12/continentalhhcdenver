@@ -687,4 +687,144 @@ document.addEventListener('DOMContentLoaded', () => {
     updateParallax();
   })();
 
+  /* =========================================================================
+     13. SUB-PAGE HERO  — Shared animation system for all inner page heroes
+     ========================================================================= */
+
+  (function initSubPageHero() {
+
+    const ph = document.querySelector('.ph');
+    if (!ph) return;
+
+    /* ------------------------------------------------------------------
+       13a. Trigger entrance animations (add .is-ready on next two frames)
+    ------------------------------------------------------------------ */
+    requestAnimationFrame(() => requestAnimationFrame(() => ph.classList.add('is-ready')));
+
+
+    /* ------------------------------------------------------------------
+       13b. Lightweight particle canvas (shared with hero-v2 style)
+    ------------------------------------------------------------------ */
+    const canvas = ph.querySelector('.ph__canvas');
+
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let W, H, pts;
+      const COUNT    = 44;
+      const MAX_DIST = 95;
+      let mouse      = { x: -9999, y: -9999 };
+
+      function resize() {
+        W = canvas.width  = ph.offsetWidth;
+        H = canvas.height = ph.offsetHeight;
+      }
+
+      function makePts() {
+        pts = Array.from({ length: COUNT }, () => ({
+          x:  Math.random() * W,
+          y:  Math.random() * H,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r:  Math.random() * 1.4 + 0.5,
+          a:  Math.random() * 0.4 + 0.1,
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        pts.forEach((p) => {
+          // Mouse repel
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const d  = Math.hypot(dx, dy);
+          if (d < 90) {
+            const f = (90 - d) / 90 * 0.01;
+            p.vx += (dx / d) * f;
+            p.vy += (dy / d) * f;
+          }
+          // Speed cap
+          const spd = Math.hypot(p.vx, p.vy);
+          if (spd > 0.8) { p.vx *= 0.8 / spd; p.vy *= 0.8 / spd; }
+
+          p.x = (p.x + p.vx + W) % W;
+          p.y = (p.y + p.vy + H) % H;
+        });
+
+        // Connections
+        for (let i = 0; i < pts.length; i++) {
+          for (let j = i + 1; j < pts.length; j++) {
+            const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+            if (d < MAX_DIST) {
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(0,168,150,${(1 - d / MAX_DIST) * 0.16})`;
+              ctx.lineWidth   = 0.7;
+              ctx.moveTo(pts[i].x, pts[i].y);
+              ctx.lineTo(pts[j].x, pts[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Dots
+        pts.forEach((p) => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(0,200,180,${p.a})`;
+          ctx.fill();
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      resize(); makePts(); draw();
+
+      window.addEventListener('resize', () => { resize(); makePts(); }, { passive: true });
+      ph.addEventListener('mousemove', (e) => {
+        const r = ph.getBoundingClientRect();
+        mouse.x = e.clientX - r.left;
+        mouse.y = e.clientY - r.top;
+      }, { passive: true });
+      ph.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; }, { passive: true });
+    }
+
+
+    /* ------------------------------------------------------------------
+       13c. Floating card bob — sinusoidal per-card with phase offset
+    ------------------------------------------------------------------ */
+    const cards = ph.querySelectorAll('.ph__card');
+    cards.forEach((card, i) => {
+      const amp    = 5 + i * 1.5;
+      const speed  = 0.9 + i * 0.15;
+      const offset = i * (Math.PI * 0.7);
+      let   t0     = null;
+
+      function bob(ts) {
+        if (!t0) t0 = ts;
+        const dy = Math.sin(((ts - t0) / 1000) * speed + offset) * amp;
+        card.style.transform = `translateY(${dy}px)`;
+        requestAnimationFrame(bob);
+      }
+
+      requestAnimationFrame(bob);
+    });
+
+
+    /* ------------------------------------------------------------------
+       13d. Parallax — bg layer moves slightly on scroll
+    ------------------------------------------------------------------ */
+    const bg = ph.querySelector('.ph__bg');
+    if (bg) {
+      function onScroll() {
+        const rect = ph.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const pct = rect.top / window.innerHeight;
+        bg.style.transform = `scale(1) translateY(${pct * 18}px)`;
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+  })(); // end initSubPageHero
+
 }); // end DOMContentLoaded

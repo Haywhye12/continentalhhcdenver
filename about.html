@@ -6,7 +6,7 @@
   <title>About Us | Continental Home Health, Inc. Denver & Aurora</title>
   <meta name="description" content="Learn about Continental Home Health, Inc. Our mission, values, and team of licensed caregivers serving seniors and families across Colorado.">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.png">
+  <link rel="icon" type="image/png" href="images/cropped-site-icon-32x32.webp">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,7 +33,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
+          <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 52px; width: auto; display: block;">
         </a>
 
         <ul class="nav-menu">
@@ -53,21 +53,89 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="page-header page-header-about">
-    <div class="container">
-      <div class="page-header-content">
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> <span>About Us</span>
+  <!-- Page Hero — About -->
+  <section class="ph ph--about" id="ph-about" aria-label="About Us hero">
+    <div class="ph__bg" aria-hidden="true"></div>
+    <canvas class="ph__canvas" aria-hidden="true"></canvas>
+    <div class="ph__orb ph__orb--1" aria-hidden="true"></div>
+    <div class="ph__orb ph__orb--2" aria-hidden="true"></div>
+    <div class="ph__lines" aria-hidden="true"></div>
+
+    <div class="container ph__container">
+      <div class="ph__content">
+
+        <nav class="ph__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>About Us</span>
+        </nav>
+
+        <div class="ph__tag">
+          <i class="fa-solid fa-heart-pulse"></i> Our Story &amp; Mission
         </div>
-        <h1 class="page-title">Dedicated to Compassionate Care in Colorado</h1>
-        <p class="page-description">Providing individuals with the clinical assistance, respect, and companionship needed to live safely and independently at home.</p>
+
+        <h1 class="ph__title">
+          Dedicated to <span class="accent">Compassionate Care</span><br>in Colorado
+        </h1>
+
+        <p class="ph__desc">
+          Providing individuals with the clinical assistance, respect, and companionship needed to live safely and independently at home — since 2010.
+        </p>
+
+        <div class="ph__actions">
+          <a href="#consultation" class="btn btn-primary" data-open-modal>
+            <i class="fa-solid fa-calendar-check"></i> Free Consultation
+          </a>
+          <a href="contact.html" class="btn btn-outline-white">
+            <i class="fa-solid fa-phone"></i> Call Us
+          </a>
+        </div>
+
+        <div class="ph__divider">
+          <div class="ph__divider-line"></div>
+          <div class="ph__chips">
+            <span class="ph__chip"><i class="fa-solid fa-award"></i> Est. 2010</span>
+            <span class="ph__chip"><i class="fa-solid fa-users"></i> Family-Owned</span>
+            <span class="ph__chip"><i class="fa-solid fa-shield-halved"></i> Licensed &amp; Insured</span>
+            <span class="ph__chip"><i class="fa-solid fa-location-dot"></i> Aurora, CO</span>
+          </div>
+        </div>
+
+      </div><!-- /.ph__content -->
+
+      <div class="ph__cards" aria-label="Quick facts">
+        <div class="ph__card">
+          <div class="ph__card-icon bg-teal"><i class="fa-solid fa-calendar"></i></div>
+          <div class="ph__card-body">
+            <strong>10+ Years</strong>
+            <span>Serving Colorado</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-navy"><i class="fa-solid fa-user-nurse"></i></div>
+          <div class="ph__card-body">
+            <strong>100% Licensed</strong>
+            <span>RNs, LPNs &amp; CNAs</span>
+          </div>
+        </div>
+        <div class="ph__card">
+          <div class="ph__card-icon bg-gold"><i class="fa-solid fa-star"></i></div>
+          <div class="ph__card-body">
+            <strong>98% Satisfaction</strong>
+            <span>Client &amp; family rated</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /.ph__container -->
+
+    <a href="#about-story" class="ph__scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- Story & Mission -->
-  <section class="section-padding">
+  <section class="section-padding" id="about-story">
     <div class="container">
       <div class="why-grid">
         <div>
@@ -93,7 +161,7 @@
 
         <div>
           <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl); border: 6px solid white;">
-            <img src="images/home-care-team.jpg" alt="Continental Home Health Professional Team in Colorado">
+            <img src="images/home-care-team.webp" alt="Continental Home Health Professional Team in Colorado">
           </div>
         </div>
       </div>
@@ -150,7 +218,7 @@
   </section>
 
   <!-- Dedicated Parallax Banner -->
-  <section class="parallax-section" style="background-image: url('images/nursing.jpg');" data-parallax data-speed="0.4">
+  <section class="parallax-section" style="background-image: url('images/nursing.webp');" data-parallax data-speed="0.4">
     <div class="parallax-overlay"></div>
     <div class="container">
       <div class="parallax-content">
@@ -195,7 +263,7 @@
       <div class="footer-grid">
         <div class="footer-col footer-about">
           <a href="index.html" class="logo" style="background: white; padding: 8px 16px; border-radius: 10px; display: inline-block;">
-            <img src="images/main-logo-300x72.png" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
+            <img src="images/main-logo-300x72.webp" alt="Continental Home Health, Inc. Logo" style="height: 44px; width: auto; display: block;">
           </a>
           <p>Delivering compassionate, licensed in-home nursing, personal care, and therapy services to enhance independence and quality of life across Colorado.</p>
           <div class="social-links">
