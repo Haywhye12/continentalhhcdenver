@@ -9,15 +9,46 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================= */
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu      = document.querySelector('.nav-menu');
+  const navOverlay   = document.getElementById('nav-overlay');
+
+  function openNav() {
+    navMenu.classList.add('active');
+    navOverlay && navOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    const icon = mobileToggle.querySelector('i');
+    if (icon) { icon.classList.replace('fa-bars', 'fa-xmark'); }
+  }
+
+  function closeNav() {
+    navMenu.classList.remove('active');
+    navOverlay && navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    const icon = mobileToggle.querySelector('i');
+    if (icon) { icon.classList.replace('fa-xmark', 'fa-bars'); }
+  }
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      }
+    mobileToggle.setAttribute('aria-expanded', 'false');
+
+    // Toggle on button click
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.contains('active') ? closeNav() : openNav();
+    });
+
+    // Close when any nav link is clicked
+    navMenu.querySelectorAll('.nav-link, .btn').forEach((link) => {
+      link.addEventListener('click', closeNav);
+    });
+
+    // Close when overlay (backdrop) is clicked
+    navOverlay && navOverlay.addEventListener('click', closeNav);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeNav();
     });
   }
 
