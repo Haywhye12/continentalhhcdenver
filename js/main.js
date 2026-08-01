@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
           modalOverlay.classList.remove('active');
         }
 
-        showToast('Thank you! Your request has been sent. We'll be in touch within 24 hours.');
+        showToast('Thank you! Your request has been sent. We\'ll be in touch within 24 hours.');
       }, 1200);
     });
   });
